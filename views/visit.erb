@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Barber Shop</title>
+</head>
+<body>
+<h1>Записаться на стрижку</h1>
+
+
+<form action='/visit' method="POST" role="form">
+	
+	<p>Выберите себе парикмахера</p>
+
+	<div class="form-group">
+		<select name="barber" class="selectpicker">
+			<option value="Anybody">No matter</option>
+			<option value="Walter">Walter White</option>
+			<option value="Jessie">Jessie Pinkman</option>
+			<option value="Gus">Gus Fring</option>
+		</select>
+	</div> <br />
+
+
+	<div class="form-group">
+		<label>Ваше имя</label>
+		<input name="username" type="text" class="form-control" placeholder="Имя">
+	</div>
+
+	<div class="form-group">
+		<label>Ваша почта</label>
+		<input name="usermail" type="text" class="form-control" placeholder="Почта">
+	</div>
+
+	<div class="form-group">
+		<label>Ваш телефон</label>
+		<input name="userphone" type="text" class="form-control" placeholder="Телефон">
+	</div>
+
+	<div class="form-group">
+		<label>Введите дату и время</label>
+		<input name="date_time" type="text" class="form-control" placeholder="dd/mm - hh/mm">
+	</div>
+
+	<button type="submit" class="btn btn-primary">Записаться</button>
+</form>
+
+
+</body>
+</html>
