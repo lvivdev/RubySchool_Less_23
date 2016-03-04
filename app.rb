@@ -23,7 +23,7 @@ before '/login/form/*' do
 end
 
 get '/' do
-	erb :index			
+	erb "Мы приветствуем Вас в нашем Barber Shop! Осмотритесь тут пока)"		
 end
 
 get '/login/form' do
@@ -64,7 +64,7 @@ post '/visit' do
 	f.write "Barber: #{@barber} for User: #{@username}, Mail: #{@usermail}, Phone: #{@userphone}, Date and time: #{@date_time}"
 	f.close
 
-	erb :visit
+	erb "Будем ждать вас, #{@username.strip.capitalize} к #{@date_time}!"
 end
 
 get '/contacts' do
