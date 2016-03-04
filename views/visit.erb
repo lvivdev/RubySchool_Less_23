@@ -9,18 +9,6 @@
 
 <form action='/visit' method="POST" role="form">
 	
-	<p>Выберите себе парикмахера</p>
-
-	<div class="form-group">
-		<select name="barber" class="selectpicker">
-			<option value="Anybody">No matter</option>
-			<option value="Walter">Walter White</option>
-			<option value="Jessie">Jessie Pinkman</option>
-			<option value="Gus">Gus Fring</option>
-		</select>
-	</div> <br />
-
-
 	<div class="form-group">
 		<label>Ваше имя</label>
 		<input name="username" type="text" class="form-control" placeholder="Имя">
@@ -40,6 +28,16 @@
 		<label>Введите дату и время</label>
 		<input name="date_time" type="text" class="form-control" placeholder="dd/mm - hh/mm">
 	</div>
+
+	<div class="form-group">
+		<label>Выберите себе парикмахера</label>
+		<select class="form-control">
+			<option value="Anybody">Не важно</option>
+			<option value="Walter">Walter White</option>
+			<option value="Jessie">Jessie Pinkman</option>
+			<option value="Gus">Gus Fring</option>
+		</select>
+	</div> <br /><br /><br />
 
 	<button type="submit" class="btn btn-primary">Записаться</button>
 </form>
