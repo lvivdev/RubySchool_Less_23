@@ -59,12 +59,14 @@ post '/visit' do
 	@userphone = params[:userphone]
 	@date_time = params[:date_time]
 	@barber = params[:barber]
+	@color = params[:color]
+
 
 	f = File.open './public/users.txt', 'a'
-	f.write "Barber: #{@barber} for User: #{@username}, Mail: #{@usermail}, Phone: #{@userphone}, Date and time: #{@date_time}"
+	f.write "Barber: #{@barber} for User: #{@username}, Mail: #{@usermail}, Phone: #{@userphone}, Date and time: #{@date_time}, Цвет стрижки: #{@color}"
 	f.close
 
-	erb "Будем ждать вас, #{@username.strip.capitalize} к #{@date_time}!"
+	erb "Будем ждать вас, #{@username.strip.capitalize} к #{@date_time}! Цвет: #{@color}"
 end
 
 get '/contacts' do
