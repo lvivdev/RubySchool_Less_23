@@ -82,7 +82,7 @@ post '/contacts' do
 	c.write "User: #{@user_name}, Mail: #{@user_mail}, Message: #{@user_message} "
 	c.close
 
-	erb :contacts
+	erb "Сообщение отправлено! Мы свяжемся с вами."
 end
 
 get '/logout' do
