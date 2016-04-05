@@ -2,31 +2,37 @@
 <html>
 <head>
 	<title>Barber Shop</title>
+
 </head>
 <body>
-<h1>Записаться на стрижку</h1>
+<h2>Записаться на стрижку</h2>
 
+<script type="text/javascript">
+	$(function(){
+		$('#color').simplecolorpicker();
+	})
+</script>
 
 <form action='/visit' method="POST" role="form">
 	
 	<div class="form-group">
 		<label>Ваше имя</label>
-		<input name="username" type="text" class="form-control" placeholder="Имя">
+		<input name="user" type="text" class="form-control" placeholder="Имя" value="<%=@user%>">
 	</div>
 
 	<div class="form-group">
 		<label>Ваша почта</label>
-		<input name="usermail" type="text" class="form-control" placeholder="Почта">
+		<input name="usermail" type="text" class="form-control" placeholder="Почта" value="<%=@usermail%>">
 	</div>
 
 	<div class="form-group">
 		<label>Ваш телефон</label>
-		<input name="userphone" type="text" class="form-control" placeholder="Телефон">
+		<input name="userphone" type="text" class="form-control" placeholder="Телефон" value="<%=@userphone%>">
 	</div>
 
 	<div class="form-group">
 		<label>Введите дату и время</label>
-		<input name="date_time" type="text" class="form-control" placeholder="dd/mm - hh/mm">
+		<input name="date_time" type="text" class="form-control" placeholder="dd/mm - hh/mm" value="<%=@date_time%>">
 	</div>
 
 	<div class="form-group">
@@ -62,9 +68,6 @@
 
 </form>
 
-<script type="text/javascript">
-$('#color').simplecolorpicker();
-</script>
 
 </body>
 </html>
